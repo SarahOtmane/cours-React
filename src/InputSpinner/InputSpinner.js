@@ -1,13 +1,21 @@
+import { useState } from 'react';
 import './InputSpinner.css'
 
 const InputSpinner = () => {
+
+    const [count, setCount] = useState(0);
+
+    const onUpdate = (num)=>{
+        setCount(count+num);
+    }
+
     return ( 
         <div className="stepper horizontal">
-        <img src="https://alikinvv.github.io/stepper/build/img/arrow.svg" className="arrow top" alt="" />
+        <img onClick={ (event =>onUpdate(-1)) } src="https://alikinvv.github.io/stepper/build/img/arrow.svg" className="arrow top" alt="" />
         <div className="box">
-            <div className="numbers1">255</div>
+            <div className="numbers1">{count}</div>
         </div>
-        <img src="https://alikinvv.github.io/stepper/build/img/arrow.svg" className="arrow bottom" alt="" />
+        <img onClick={ (event =>onUpdate(1)) } src="https://alikinvv.github.io/stepper/build/img/arrow.svg" className="arrow bottom" alt="" />
     </div>
     );
 }

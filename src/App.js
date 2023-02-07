@@ -113,12 +113,51 @@
 
 
 
-import InputSpinner from "./InputSpinner/InputSpinner";
 
+
+
+
+
+
+
+// import InputSpinner from "./InputSpinner/InputSpinner";
+
+// function App(){
+//     return(
+//         <div className="App">
+//             <InputSpinner></InputSpinner>
+//         </div>
+//     )
+// }
+
+// export default App;
+
+
+
+
+// import Rating from "./Rating/Rating";
+
+// function App(){
+//     return(
+//         <div className="App">
+//             <Rating/>
+//         </div>
+//     )
+// }
+
+// export default App;
+
+
+
+
+
+
+
+import Switch from "./SwitchDayMode/SwitchDayMode";
 function App(){
     return(
         <div className="App">
-            <InputSpinner></InputSpinner>
+            <Switch day={true} />
         </div>
     )
 }

@@ -1,0 +1,9 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rate{
+    margin-left: 1rem;
+}
